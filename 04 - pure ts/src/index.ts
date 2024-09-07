@@ -1,3 +1,11 @@
+// Access Modifiers
+// Public - You can use anywhere
+// Private - Only use in same classs
+// Protected - same class and child class
+
+
+
+
 // class User {
 //     public email: string
 //     private name: string
@@ -11,7 +19,7 @@
 // }
 
 class User {
-    private _courseCount = 1
+    protected _courseCount = 1
     readonly city:string = ""
     constructor(
         public email: string,
@@ -39,6 +47,11 @@ class User {
         this._courseCount = courseNum
     }
 }
-
+class SubUser extends User{
+    isFamily: boolean = true;
+    changeCourseCount() {
+        this._courseCount = 4
+    }
+}
 
 const vraj = new User("v@gmail.com", "vraj")

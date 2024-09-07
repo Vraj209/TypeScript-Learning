@@ -30,3 +30,18 @@ interface Bottle{
 }
 
 identityFour<Bottle>({ brand: "1", type: 2 })
+
+
+// Array Functions
+function getSearchProducts<T>(products:T[]): T{
+    // database operations
+    const myIndex = 3
+    return products[myIndex]
+}
+
+// Arrary Arrow Functions : <T,> this generic not jsx syntax
+const getMoreSearchProducts = <T,>(products:T[]):T => {
+    // do some database operations
+    const myIndex = 4
+    return products[myIndex]
+}
